@@ -46,16 +46,6 @@ var mySwiper = new Swiper('.swiper-container', {
   },
 })
 
-var modal = document.getElementById('video__showreel');
-var muteVideo = document.getElementById("video__showreel__player");
-window.onclick = function(event) {
-  if (event.target == modal) {
-    muteVideo.muted = true;
-    muteVideo.pause();
-    modal.style.display = "none";
-  }
-}
-
 var bgvideos = document.querySelectorAll('.autoplay');
 
 bgvideos.forEach(bgvideo =>{

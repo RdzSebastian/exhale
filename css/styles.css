@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'MillerBannerBook';
-    src: url(./fonts/MillerBannerBook.otf);
+    src: url(../fonts/MillerBannerBook.otf);
     }
 
 
@@ -114,16 +114,6 @@ h2{
 .arrow__scroll:hover {
     bottom: 2vh;
 }
-
-/*
-.arrow__scroll:hover .line__scroll {
-    animation: line_animation .75s cubic-bezier(.53, .28, .71, .46);
-}
-
-.line__scroll:hover ~ .arrow > .arrow__line {
-    animation: arrow_animation .75s cubic-bezier(.53, .28, .71, .46);
-}
-*/
 
 .arrow {
     position: absolute;
@@ -311,13 +301,6 @@ p, a {
     background-color:rgba(0,0,0,0.4);
     align-items: center; 
     justify-content: center;
-}
-
-.showreel__video {
-    max-height: 90vh;
-    max-width: 90vw;
-    width: auto;
-    height: auto;
 }
 
 .play__button {
