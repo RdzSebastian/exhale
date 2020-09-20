@@ -22,14 +22,18 @@ elements.forEach(element =>{
 
 var mySwiper = new Swiper('.swiper-container', {
   // Optional parameters
-  direction: 'vertical',
-  loop: true,
+  direction: 'horizontal',
+  loop: false,
 
+    
+  speed: 800,
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
   },
-
+    preloadImages: false,
+    // Enable lazy loading
+    lazy: true,
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
@@ -41,3 +45,13 @@ var mySwiper = new Swiper('.swiper-container', {
     el: '.swiper-scrollbar',
   },
 })
+
+var modal = document.getElementById('video__showreel');
+var muteVideo = document.getElementById("video__showreel__player");
+window.onclick = function(event) {
+  if (event.target == modal) {
+    muteVideo.muted = true;
+    muteVideo.pause();
+    modal.style.display = "none";
+  }
+}

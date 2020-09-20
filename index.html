@@ -4,8 +4,9 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="exhale-icon.png">
     <title>[exhale]</title>
 </head>
 <body>
@@ -25,11 +26,8 @@
                     </ul>
                 </div>
             </nav>   
-            <video class="header__video" autoplay loop muted playsinline src="./resources/video/exhale-bkg-video.webm">
+            <video class="header__video" autoplay loop muted playsinline src="./resources/video/exhale-bkg-video-v2.webm">
             </video>
-            <div class="x__logo">
-                <img src="resources/logos/exhale_logo/logo-big.png" alt="">
-            </div>
             <div class="text__bottomleft">
                     <h1 class="title__1">ex·hale</h1>
                     <h2 class="sub__title__1">/eks'hâl,'eks,hâl/</h2>
@@ -67,7 +65,11 @@
         </header>
 
         <section id="showreel" class="section__content scroll__child">
-            <video class="section__video" autoplay muted loop playsinline src="./resources/video/portfolio-vid-01.mp4"></video>
+            <button onclick="document.getElementById('video__showreel').style.display='flex'; document.getElementById('video__showreel__player').muted = false; document.getElementById('video__showreel__player').play()" class="play__button">play_showreel</button>
+            <div id="video__showreel" class="video__modal">
+                <video id="video__showreel__player" src="./resources/video/showreel.webm" class="showreel__video" loop controls controlsList="nodownload" playsinline></video>
+            </div>
+               
             <div class="text__bottomleft">
                 <h1 class="title__1">show·reel</h1>
                 <h2 class="sub__title__1">/ˈʃəʊriːl/</h2>
@@ -80,30 +82,65 @@
         </section>
 
         <section id="section_1" class="section__content scroll__child">
-            <video class="section__video" autoplay loop muted playsinline src="./resources/video/portfolio-vid-01.mp4"></video>
+            
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><video class="section__video swiper-lazy" autoplay loop muted playsinline data-src="./resources/video/section-1_1.webm"></video></div>
+                    <div class="swiper-slide"><video class="section__video swiper-lazy" autoplay loop muted playsinline data-src="./resources/video/section-1_2.webm"></video></div>
+                    <div class="swiper-slide"><video class="section__video swiper-lazy" autoplay loop muted playsinline data-src="./resources/video/section-1_3.webm"></video></div>
+                    <div class="swiper-slide"><video class="section__video swiper-lazy" autoplay loop muted playsinline data-src="./resources/video/section-1_4.webm"></video></div>
+                    <div class="swiper-slide"><video class="section__video swiper-lazy" autoplay loop muted playsinline data-src="./resources/video/section-1_5.webm"></video></div>
+                    ...
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev slider__arrow"></div>
+                <div class="swiper-button-next slider__arrow"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
             <div class="text__bottomleft">
                 <h1 class="title__1">night·mode</h1>
                 <h2 class="sub__title__1">/nʌɪt, məʊd/</h2>
                 <h3 class="sub__title__2">noun</h3>
                 <p>
-                    Full brand built from inception to launch of new record label, Night Mode.<br>
-                    Starting with identification of key brand pillars, from logo creation & ident animation<br>
-                    to the social media launch campaign strategy and asset creation. <br>
-                    Now continuing with regular sourcing and design of release artworks & animated video trailers.
+                    Full brand built from inception <br class="media__ss">to launch of new record label, Night Mode.<br class="media__bs">
+                    <br class="media__ss">Starting with identification of key brand pillars, <br class="media__ss">from logo creation & ident animation<br class="media__bs">
+                    <br class="media__ss">to the social media launch campaign strategy <br class="media__ss">and asset creation. <br class="media__bs">
+                    Now continuing <br class="media__ss">with regular sourcing and design<br class="media__ss"> of release artworks & animated video trailers.
                 </p>
             </div>
         </section>
 
         <section id="section_2" class="section__content scroll__child">
-            <video class="section__video" autoplay loop muted playsinline src="./resources/video/portfolio-vid-02.mp4"></video>
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><video class="section__video swiper-lazy" autoplay loop muted playsinline data-src="./resources/video/section-2_1.webm"></video></div>
+                    <div class="swiper-slide"><video class="section__video swiper-lazy" autoplay loop muted playsinline data-src="./resources/video/section-2_2.webm"></video></div>
+                    <div class="swiper-slide"><video class="section__video swiper-lazy" autoplay loop muted playsinline data-src="./resources/video/section-2_3.webm"></video></div>
+                    <div class="swiper-slide"><video class="section__video swiper-lazy" autoplay loop muted playsinline data-src="./resources/video/section-2_4.webm"></video></div>
+                    <div class="swiper-slide"><video class="section__video swiper-lazy" autoplay loop muted playsinline data-src="./resources/video/section-2_5.webm"></video></div>
+                    ...
+                </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev slider__arrow"></div>
+                <div class="swiper-button-next slider__arrow"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
             <div class="text__bottomleft">
                 <h1 class="title__1">peek·a·boo</h1>
                 <h2 class="sub__title__1">/'p ké,bôo/</h2>
                 <h3 class="sub__title__2">noun</h3>
                 <p>
-                    Provided creative direction & content creation for a variety<br>
-                    of projects including live tour visuals, tour posters, album arts<br>
-                    and accompanying video trailers/social assets.
+                    Provided creative direction & content creation <br class="media__ss">for a variety<br class="media__bs">
+                    of projects including <br class="media__ss">live tour visuals, tour posters, album arts<br class="media__bs">
+                    <br class="media__ss">and accompanying video trailers/social assets.
                 </p>
             </div>
         </section>
@@ -119,7 +156,7 @@
         </footer>
     </div>
     
-<script src="app.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
