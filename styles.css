@@ -1,0 +1,275 @@
+@font-face {
+    font-family: 'MillerBannerBook';
+    src: url(./fonts/MillerBannerBook.otf);
+    }
+
+
+:root {
+    --main-color-black: #000;
+    --main-color-white: #F8F8F8;
+    --hover-color-white: #FFF;
+}
+
+*, *::before, *::after { box-sizing: border-box;}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--main-color-black);
+    font-family: 'MillerBannerBook';
+    color: var(--main-color-white);
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    letter-spacing: .15em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+header {
+    position: relative;
+    top: 0;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-color-white);
+}
+
+a:hover {
+    text-shadow: 0px 0px 15px var(--main-color-white);
+    color: #FFF;
+}
+
+.text__bottomleft .title__1 {
+    font-size:  2em;
+}
+
+h2{
+    font-size: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+
+
+.navbar {
+    font-size: 1em;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    height: 200px;
+    width: 100%;
+    margin-top: 0;
+    z-index: 150;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.8), rgba(0,0,0,0));
+}
+
+.navbar ul {
+    display: flex;
+    top: 0;
+    list-style-type: none;
+    z-index: 1;
+    margin: 0;
+}
+
+.navbar ul a li {
+    margin-left: 15px;
+}
+
+.arrow__scroll {
+    position: relative;
+    bottom: 5vh;
+    margin: 50%;
+    width: 20px;
+    animation: displace_y 1s cubic-bezier(0, .4, 0, 1);
+    transition: 250ms;
+}
+
+.line__scroll {
+    position: absolute;
+    height: 10vh;
+    max-height: 75px;
+    bottom: 50px;
+    left: 50%;
+    border: 1px solid white;
+}
+
+.line__scroll::before {
+    content: " ";
+    position: absolute;
+    width: 40px;
+    height: 120px;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.arrow__scroll:hover {
+    bottom: 2vh;
+}
+
+/*
+.arrow__scroll:hover .line__scroll {
+    animation: line_animation .75s cubic-bezier(.53, .28, .71, .46);
+}
+
+.line__scroll:hover ~ .arrow > .arrow__line {
+    animation: arrow_animation .75s cubic-bezier(.53, .28, .71, .46);
+}
+*/
+
+.arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform-origin: bottom;
+    transform: rotate(45deg);
+}
+
+.arrow__line {
+    position: static;
+    height: 10px;
+    border: 1px solid white;
+    animation: arrow_animation .75s cubic-bezier(.53, .28, .71, .46);
+}
+
+@keyframes displace_y {
+    from {
+        bottom: 400px; opacity: 0;
+    }
+    
+    to {
+        bottom: 5vh; opacity: 1;
+    }
+}
+
+@keyframes line_animation {
+    0% {
+        transform-origin: bottom; transform: scaleY(1);
+    }
+    
+    50% {
+        transform-origin: bottom; transform: scaleY(0);
+    }
+    
+    51% {
+        transform-origin: top; transform: scaleY(0);        
+    }
+    
+    100% {
+        transform-origin: top; transform: scaleY(1);
+    }
+}
+
+@keyframes arrow_animation {
+    from {
+        transform-origin: bottom; transform: scaleY(0);
+    }
+    
+    to {
+        transform-origin: bottom; transform: scaleY(1);
+    }
+}
+
+.text__bottomleft {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;    
+    transform: translateX(-98%);
+    opacity: 0;
+    transition: transform 200ms ease-in, opacity 300ms ease-in;
+}
+
+.text__bottomleft.appear {
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+
+section {
+    position: relative;
+    display: block;
+    height: 100vh;
+}
+
+video{
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -10;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.contact {
+    position: relative;
+    height: 150px;
+    padding: 20px;
+    background-color: #E0E0E0;
+}
+
+.contact div {
+    position: absolute;    
+}
+
+.bottom__seal {
+    position: absolute;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    height: 100px;
+}
+
+.contact p, .contact a{
+    color: var(--main-color-black);
+}
+
+.bottomright {
+    position: fixed;
+    z-index: 15;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+}
+
+.exhale__logo{
+    width: 100%;
+}
+
+.x__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    object-fit: cover;
+}
+.x__logo img {
+    position: absolute;
+    height: 30vh;
+    max-height: 300px;
+}
+            
+.dots__nav {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    align-self: center;
+    z-index: 10;
+    
+}
+
+.dot {
+    margin: 5px;
+    height: 8px;
+    width: 8px;
+    border: var(--main-color-white) solid 1px;
+    border-radius: 50%;
+}
