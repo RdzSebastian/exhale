@@ -326,14 +326,13 @@ p, a {
     .header__video, .section__video {
         width: 100%;
         height: 100%;
+
     }
     
-    section {
-        width: 100vw;
-        height: 100vw;
-        max-height: 480px;
+    section, header{
+        height: 50vh;
     }
-    
+
    .text__bottomleft p, .text__bottomleft a {
         font-size: .6em;
         font-weight: 100;
@@ -390,8 +389,10 @@ p, a {
     }
 
     .mobile { 
-        display: block }
-    .desktop {
-         display: none }
+        display: block 
+    }
 
+    .desktop {
+         display: none 
+     }
 }
