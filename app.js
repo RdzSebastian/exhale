@@ -55,3 +55,11 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+var bgvideos = document.querySelectorAll('.autoplay');
+
+bgvideos.forEach(bgvideo =>{
+    bgvideo.muted = true;
+    bgvideo.play();
+    bgvideo.loop = true;
+    });
